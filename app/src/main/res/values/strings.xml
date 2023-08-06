@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">APExercise8</string>
+    <string name="app_temp">Temperature Unit:</string>
+    <string name="app_weather">Weather Condition:</string>
+    <string name="app_Location">Choose Location</string>
+    <string name="app_sunny">Sunny</string>
+    <string name="app_cloudy">Cloudy</string>
+    <string name="app_rainy">Rainy</string>
+    <string name="app_option1">Option 1</string>
+    <string name="app_option2">Option 2</string>
+
+    <string name="app_dialogTitle">Weather Update</string>
+    <string name="app_dialogMessage">Weather Update</string>
+
+        <string-array name="locations">
+            <item>New York</item>
+            <item>London</item>
+            <item>Tokyo</item>
+        </string-array>
+
+
+</resources>

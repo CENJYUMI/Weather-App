@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebackground"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/app_temp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/app_weather"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:text="@string/app_Location"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:text="Celsius / Fahrenheit"
+        android:textOff="Fahrenheit"
+        android:textOn="Celsius"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rainy">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_option1"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_option2"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/Sunny"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_sunny"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <CheckBox
+        android:id="@+id/Cloudy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_cloudy"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Sunny"
+        app:layout_constraintStart_toStartOf="@+id/Sunny"
+        app:layout_constraintTop_toBottomOf="@+id/Sunny" />
+
+    <CheckBox
+        android:id="@+id/Rainy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_rainy"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Cloudy"
+        app:layout_constraintStart_toStartOf="@+id/Cloudy"
+        app:layout_constraintTop_toBottomOf="@+id/Cloudy" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="374dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#FDFDFD"
+        android:minHeight="48dp"
+        android:scrollbarSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <FrameLayout
+        android:id="@+id/FrameLayout"
+        android:layout_width="374dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#8DE1EC"
+        android:backgroundTint="#BAD6E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2">
+
+        <ImageView
+            android:id="@+id/weatherImageView"
+            android:layout_width="257dp"
+            android:layout_height="229dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sunnycloudyyy"
+            android:visibility="visible" />
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
